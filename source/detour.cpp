@@ -32,20 +32,21 @@ void* DetourFunction(uint64_t address, void* destination, int length) {
 	return stubAddress;
 }
 
-
 /*
 	Example:
 	- hook length must be greater than 14 and has to line up with instructions
 	- i.e. if 14 bytes ends up in the middle of the instruction, count how many more ops are in the instruction and add that to 14
 	- many functions end up being length 17 or 20
 
-	void(*FunctionStub)(uint64_t);
-	void FuncHook(uint64_t parameter1) {
-		FunctionStub(parameter1);
+	typedef void (*Function_t)(uint64_t);
+	Function_t Function_s;
+	void Function_h(uint64_t parameter1)
+	{
+		Function_s(parameter1);
 	}
 
-	extern "C" void _start(void) {
-		FunctionStub = DetourFunction(address, FuncHook, length);
+	extern "C" void _start(void)
+	{
+		Function_s = (Function_t)DetourFunction(0x0, Function_h, length);
 	}
-
 */
