@@ -10,6 +10,7 @@ This is not system version specific, so it will work on 4.05, 4.55, 5.05 etc
 - Socket Printf
 
 # How to Use
+- Make sure you have cc1plus installed (sudo apt-get install g++)
 - Go to directory with the Makefile on Linux Shell
 - type 'make'
 - project.elf is your exectuable
