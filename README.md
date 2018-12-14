@@ -9,7 +9,7 @@ This is a source for building ELF files on the PS4<br>
 - Socket Printf
 
 # How to Use
-- Go to directory with the Makefile on PowerShell/Linux Shell (I have to use Linux Shell so I recommend using that)
+- Go to directory with the Makefile on Linux Shell
 - type 'make'
 - project.elf is your exectuable
 - Load with jkpatch or api of your choice
