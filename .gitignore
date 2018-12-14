@@ -1,3 +1,6 @@
+# Output Files
+*.elf
+
 # Prerequisites
 *.d
 
