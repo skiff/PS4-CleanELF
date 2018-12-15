@@ -17,5 +17,5 @@ This is not system version specific, so it will work on 4.05, 4.55, 5.05 etc
 - Load with jkpatch or api of your choice
 
 # Credits
-- Sabotage: how to do detours
+- Sabotage: how to do x64 detours
 - 2much4u/xemio: makefile/building examples
