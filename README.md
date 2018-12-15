@@ -15,3 +15,7 @@ This is not system version specific, so it will work on 4.05, 4.55, 5.05 etc
 - type 'make'
 - project.elf is your exectuable
 - Load with jkpatch or api of your choice
+
+# Credits
+- Sabotage: how to do detours
+- 2much4u/xemio: makefile/building examples
