@@ -16,5 +16,9 @@ This is not system version specific, so it will work on 4.05, 4.55, 5.05 etc
 - project.elf is your exectuable
 - Load with jkpatch or api of your choice
 
-# Known Problems:
+# Known Issues:
 - Because we do not use stdlib (-fnostdlib), there are some limitations like not having global variables with constructors. As an example, in my vector class there is a constructor and deconstructor. If you try make a global vec3_t or vec2_t variable, it will not link because the constructor for the variable is never being called. If anyone knows how to fix this without using the g++ standards let me know
+
+# Credits
+- Sabotage: how to do x64 detours
+- 2much4u/xemio: makefile/building examples

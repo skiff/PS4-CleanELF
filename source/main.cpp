@@ -9,5 +9,5 @@
 extern "C" void _main(void) {
 	initImports();
 
-	sceSysUtilSendSystemNotificationWithText(222, "Clean PS4 ELF Loaded");
+	sceSysUtilSendSystemNotificationWithText(222, "Clean PS4 ELF");
 }
