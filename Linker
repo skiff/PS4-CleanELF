@@ -5,17 +5,20 @@ ENTRY(_start)
 
 PHDRS
 {
-	code PT_LOAD;
-  	headers PT_PHDR FILEHDR PHDRS;
-	text PT_LOAD;
-	data PT_LOAD;
-	bss PT_LOAD;
+   code_seg PT_LOAD;
+   data_seg PT_LOAD;
 }
 
 SECTIONS
 {
-  .text 0x500: { *(.text) } :code
-  .data : { *(.data) }
-  .bss : { *(.bss) }
-  /DISCARD/ : { *(.eh_frame) }
+	/* Code segment */
+	.text : {
+		*(.text.start)
+		*(.text*)
+	} : code_seg
+	.rodata : { *(.rodata) *(.rodata*) } : code_seg
+
+	/* Data segment */
+	.data : { *(.data) } : data_seg
+	.bss  : { *(.bss) }  : data_seg
 }
